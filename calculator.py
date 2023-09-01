@@ -16,32 +16,50 @@ while True:
     print("2. chu vi / diện tích của các loại hình phẳng")
     print("3. chu vi / diện tích / thể tích của các loại hình không gian")
     print("4. thoát")
-
     choice = int(input("Nhập số để lựa chọn: "))
-    clear_screen()
-
+    
     if choice == 1:
         clear_screen()
         print("Bạn đã chọn phép tính thường")
         print("Bạn muốn tính phép tính dạng nào?")
-        print("1. Số tự nhiên")
+        print("1. Số thường")
         print("2. Phân số")
-        print("3. Số thập phân")
+        vote = int(input("Nhập số để lựa chọn: "))
         
-        number1 = float(input("Nhập số đầu tiên để thực hiện phép tính: "))
-        operation = input("Nhập dấu để tính ( cộng, trừ, nhân, hoặc chia ): ")
-        number2 = float(input("Nhập số thứ hai để thực hiện phép tính: "))
+        if vote == 1:
+            clear_screen()
+            print("Bạn đã chọn tính số thường")
+            number1 = float(input("Nhập số đầu tiên để thực hiện phép tính: "))
+            operation = input("Nhập dấu để tính ( cộng, trừ, nhân, hoặc chia ): ")
+            number2 = float(input("Nhập số thứ hai để thực hiện phép tính: "))
 
-        if operation == "cộng":
-            result = number1 + number2
-        elif operation == "trừ":
-            result = number1 - number2
-        elif operation == "nhân":
-            result = number1 * number2
-        elif operation == "chia":
-            result = number1 / number2
-        print("kết quả là:", result)
+            if operation == "cộng":
+                result = number1 + number2
+            elif operation == "trừ":
+                result = number1 - number2
+            elif operation == "nhân":
+                result = number1 * number2
+            elif operation == "chia":
+                result = number1 / number2
+            print("kết quả là:", result)
 
+        elif vote == 2:
+            clear_screen()
+            print("Bạn đã chọn tính phân số")
+            print("Cách ghi: 2 phần 3 = 2/3")
+            number3 = Fraction(input("Nhập số đầu tiên để thực hiện phép tính: "))
+            operations = input("Nhập dấu để tính ( cộng, trừ, nhân, hoặc chia ): ")
+            number4 = Fraction(input("Nhập số thứ hai để thực hiện phép tính: "))
+
+            if operations == "cộng":
+                result1 = number3 + number4
+            elif operations == "trừ":
+                result1 = number3 - number4
+            elif operations == "nhân":
+                result1 = number3 * number4
+            elif operations == "chia":
+                result1 = number3 / number4
+            print("kết quả là:", result1)
 
     elif choice == 2:
         clear_screen()
