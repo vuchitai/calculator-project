@@ -5,6 +5,17 @@ import math
 def clear_screen(): 
         os.system("cls" if os.name == "nt" else "clear")
 
+def find_gcd(a, b):
+    while b != 0:
+        a, b = b, a % b
+    return a
+
+
+def find_lcm(a, b):
+    gcd = find_gcd(a, b)
+    lcm = (a * b) // gcd
+    return lcm
+
 from fractions import Fraction
 
 pi = math.pi
@@ -15,7 +26,8 @@ while True:
     print("1. phép tính thường")
     print("2. chu vi / diện tích của các loại hình phẳng")
     print("3. chu vi / diện tích / thể tích của các loại hình không gian")
-    print("4. thoát")
+    print("4. tìm ƯCLN / BCNN")
+    print("5. thoát")
     choice = int(input("Nhập số để lựa chọn: "))
     
     if choice == 1:
@@ -668,6 +680,30 @@ while True:
                     print("Kết quả là:", tong55, "cm3")
 
     elif choice == 4:
+        clear_screen()
+        print("Bạn đã chọn tìm ƯCLN / BCNN")
+        print("Bạn muốn tìm cái nào?")
+        print("1.ƯCLN")
+        print("2.BCNN")
+        cull = int(input("Nhập số để lựa chọn: "))
+        
+        if cull == 1:
+            clear_screen()
+            print("Bạn đã chọn tìm ƯCLN")
+            g5 = float(input("Mời bạn nhập số thứ nhất: "))
+            h5 = float(input("Mời bạn nhập số thứ hai: "))
+            gcd = find_gcd(g5, h5)
+            print("Ước chung lớn nhất của", g5, "và", h5, "là:", gcd)
+
+        elif cull == 2:
+            clear_screen()
+            print("Bạn đã chọn tìm BCNN")
+            i5 = float(input("Mời bạn nhập số thứ nhất: "))
+            k5 = float(input("Mời bạn nhập số thứ hai: "))
+            lcm = find_lcm(i5, k5)
+            print("Bội số chung nhỏ nhất của", i5, "và", k5, "là:", lcm)
+
+    elif choice == 5:
         clear_screen()
         print("cảm ơn bạn đã sử dụng.")
         break
