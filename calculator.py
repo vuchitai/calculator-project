@@ -27,7 +27,9 @@ while True:
     print("2. chu vi / diện tích của các loại hình phẳng")
     print("3. chu vi / diện tích / thể tích của các loại hình không gian")
     print("4. tìm ƯCLN / BCNN")
-    print("5. thoát")
+    print("5. tính lũy thừa")
+    print("6. tính căn bậc")
+    print("7. thoát")
     choice = int(input("Nhập số để lựa chọn: "))
     
     if choice == 1:
@@ -705,10 +707,24 @@ while True:
 
     elif choice == 5:
         clear_screen()
+        print("Bạn đã chọn tính lũy thừa")
+        l5 = float(input("Mời bạn nhập cơ số: "))
+        m5 = float(input("Mời bạn nhập số mũ: "))
+        tong56 = l5 ** m5
+        print("Kết quả là:", tong56)
+        
+    elif choice == 6:
+        clear_screen()
+        print("Bạn đã chọn tính căn bậc")
+        n5 = float(input("Mời bạn nhập radicand của phép tính: "))
+        o5 = int(input("Mời bạn nhập căn bậc của phép tính: "))
+        tong57 = f'{n5**(1/o5)}'
+        print(f'căn bậc {o5} của {n5} là:', tong57)
+
+    elif choice == 7:
+        clear_screen()
         print("cảm ơn bạn đã sử dụng.")
         break
-
-
 
     cont = input("Tiếp tục tính toán? (có/không): ").lower()
     if cont.lower() != 'có':
