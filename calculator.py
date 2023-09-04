@@ -49,8 +49,38 @@ def tinh_hieu_da_thuc():
     hieu = sp.simplify(a - b)
 
     # In ra đa thức tổng dưới dạng x^n thay vì x**n
-    hieu_str = str(tong).replace("**", "^")
+    hieu_str = str(hieu).replace("**", "^")
     print("Đa thức tổng (a - b) là:", hieu_str)
+    
+def tinh_tich_da_thuc():
+    # Nhập hai biểu thức từ người dùng
+    input_a = input("Nhập biểu thức a(x): ")
+    input_b = input("Nhập biểu thức b(x): ")
+
+    # Chuyển đổi biểu thức thành định dạng sympy và tính tổng
+    a = chuyen_doi_bieu_thuc(input_a)
+    b = chuyen_doi_bieu_thuc(input_b)
+
+    tich = sp.simplify(a * b)
+
+    # In ra đa thức tổng dưới dạng x^n thay vì x**n
+    tich_str = str(tich).replace("**", "^")
+    print("Đa thức tổng (a * b) là:", tich_str)
+    
+def tinh_thuong_da_thuc():
+    # Nhập hai biểu thức từ người dùng
+    input_a = input("Nhập biểu thức a(x): ")
+    input_b = input("Nhập biểu thức b(x): ")
+
+    # Chuyển đổi biểu thức thành định dạng sympy và tính tổng
+    a = chuyen_doi_bieu_thuc(input_a)
+    b = chuyen_doi_bieu_thuc(input_b)
+
+    thuong = sp.simplify(a / b)
+
+    # In ra đa thức tổng dưới dạng x^n thay vì x**n
+    thuong_str = str(thuong).replace("**", "^")
+    print("Đa thức tổng (a / b) là:",_thuong_str)
     
 
 from fractions import Fraction
@@ -763,7 +793,34 @@ while True:
     elif choice == 7:
         clear_screen()
         print("Bạn đã chọn tính đa thức 1 biến")
-        tinh_tong_da_thuc()
+        print("Bạn muốn tính kiểu gì?")
+        print("1. tổng")
+        print("2. hiệu")
+        print("3. tích")
+        print("4. thương")
+        range = int(input("Nhập số để lựa chọn: "))
+        
+        if range == 1:
+            clear_screen()
+            print("Bạn đã chọn tính tổng đa thức")
+            tinh_tong_da_thuc()
+            
+        elif range == 2:
+            clear_screen()
+            print("Bạn đã chọn tính hiệu đa thức")
+            tinh_hieu_da_thuc()
+            
+        elif range == 3:
+            clear_screen()
+            print("Bạn đã chọn tính tích đa thức")
+            tinh_tich_da_thuc()
+            
+        elif range == 4:
+            clear_screen()
+            print("Bạn đã chọn tính thương đa thức")
+            tinh_thuong_da_thuc
+        
+        
         
     elif choice == 8:
         clear_screen()
