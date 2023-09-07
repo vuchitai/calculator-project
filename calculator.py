@@ -112,37 +112,18 @@ while True:
         if vote == 1:
             clear_screen()
             print("Bạn đã chọn tính số thường")
-            number1 = float(input("Nhập số đầu tiên để thực hiện phép tính: "))
-            operation = input("Nhập dấu để tính ( cộng, trừ, nhân, hoặc chia ): ")
-            number2 = float(input("Nhập số thứ hai để thực hiện phép tính: "))
-
-            if operation == "cộng":
-                result = number1 + number2
-            elif operation == "trừ":
-                result = number1 - number2
-            elif operation == "nhân":
-                result = number1 * number2
-            elif operation == "chia":
-                result = number1 / number2
-            print("kết quả là:", result)
+            from pheptinhthuong.tinhsothuong import tinh_so_thuong
+            result1 = tinh_so_thuong()
+            print(f"Kết quả là: {result1}")
 
         elif vote == 2:
             clear_screen()
             print("Bạn đã chọn tính phân số")
             print("Cách ghi: 2 phần 3 = 2/3")
-            number3 = Fraction(input("Nhập số đầu tiên để thực hiện phép tính: "))
-            operations = input("Nhập dấu để tính ( cộng, trừ, nhân, hoặc chia ): ")
-            number4 = Fraction(input("Nhập số thứ hai để thực hiện phép tính: "))
+            from pheptinhthuong.tinhphanso import tinh_phan_so
+            result3 = tinh_phan_so()
+            print(f"KQ là:, {result3}")
 
-            if operations == "cộng":
-                result1 = number3 + number4
-            elif operations == "trừ":
-                result1 = number3 - number4
-            elif operations == "nhân":
-                result1 = number3 * number4
-            elif operations == "chia":
-                result1 = number3 / number4
-            print("kết quả là:", result1)
 
     elif choice == 2:
         clear_screen()
@@ -154,141 +135,14 @@ while True:
 
         if choose == 1:
             clear_screen()
-            print("Bạn đã chọn tính chu vi")
-            print("Bạn muốn tính chu vi hình nào?")
-            print("1. hình vuông")
-            print("2. hình chữ nhật")
-            print("3. hình tam giác")
-            print("4. hình thang")
-            print("5. hình bình hành")
-            print("6. hình thoi")
-            print("7. hình tròn")
-            select =  int(input("Nhập số để lựa chọn: "))
+            from hinhphang.tinhchuvi import tinh_chu_vi
+            tinh_chu_vi()
             
-            if select == 1:
-                clear_screen()
-                print("Bạn đã chọn tính chu vi hình vuông")
-                a = float(input("Mời bạn nhập độ dài của 1 cạnh hình vuông: "))
-                tong = a * 4
-                print("kết quả là:", tong, "cm")
-
-            elif select == 2:
-                clear_screen()
-                print("Bạn đã chọn tính chu vi hình chữ nhật")
-                b = float(input("Mời bạn nhập chiều dài cạnh hình chữ nhật: "))
-                c = float(input("Mời bạn nhập chiều rộng cạnh hình chữ nhật: "))
-                tong1 = (b + c) * 2
-                print("Kết quả là:", tong1 ,"cm")
-
-            elif select == 3:
-                clear_screen()
-                print("Bạn đã chọn tính chu vi hình tam giác")
-                e = float(input("Mời bạn nhập chiều dài cạnh thứ 1 của hình: "))
-                f = float(input("Mời bạn nhập chiều dài cạnh thứ 2 của hình: "))
-                g = float(input("Mời bạn nhập chiều dài cạnh thứ 3 của hình: "))
-                tong2 = e + f + g
-                print("Kết quả là:", tong2 ,"cm")
-                
-            elif select == 4:
-                clear_screen()
-                print("Bạn đã chọn tính chu vi hình thang")
-                h = float(input("Mời bạn nhập chiều dài đáy bé của hình: "))
-                i = float(input("Mời bạn nhập chiều dài đáy lớn của hình: "))
-                k = float(input("Mời bạn nhập chiều dài cạnh bên thứ 1 của hình: "))
-                l = float(input("Mời bạn nhập chiều dài cạnh bên thứ 2 của hình: "))
-                tong3 = h + i + k + l
-                print("Kết quả là:", tong3 ,"cm")
-
-            elif select == 5:
-                clear_screen()
-                print("Bạn đã chọn tính chu vi hình bình hành")
-                m = float(input("Mời bạn nhập chiều dài cạnh thứ 1 của hình: "))
-                n = float(input("Mời bạn nhập chiều dài cạnh thứ 2 của hình: "))
-                tong4 = 2 * (m + n)
-                print("Kết quả là:", tong4, "cm")
-
-            elif select == 6:
-                clear_screen()
-                print("Bạn đã chọn tính chu vi hình thoi")
-                o = float(input("Mời bạn nhập độ dài của 1 cạnh hình thoi: "))
-                tong5 = o * 4
-                print("kết quả là:", tong5, "cm")
-
-            elif select == 7:
-                clear_screen()
-                print("Bạn đã chọn tính chu vi hình tròn")
-                p = float(input("Mời bạn nhập bán kính hình tròn: "))
-                tong6 = 2 * pi * p
-                print("Kết quả là:", tong6,"cm")
-
         elif choose == 2:
             clear_screen()
-            print("Bạn đã chọn tính diện tích")
-            print("Bạn muốn tính diện tích hình nào?")
-            print("1. hình vuông")
-            print("2. hình chữ nhật")
-            print("3. hình tam giác")
-            print("4. hình thang")
-            print("5. hình bình hành")
-            print("6. hình thoi")
-            print("7. hình tròn")
-            sort = float(input("Nhập số để lựa chọn: "))
-
-            if sort == 1:
-                clear_screen()
-                print("Bạn đã chọn tính diện tích hình vuông")
-                q = float(input("Mời bạn nhập chiều dài của 1 cạnh hình vuông: "))
-                tong7 = q * q
-                print("Kết quả là:", tong7,"cm2")
-
-            elif sort == 2:
-                clear_screen()
-                print("Bạn đã chọn tính diện tích hình chữ nhật")
-                r = float(input("Mời bạn nhập chiều dài của hình: "))
-                s = float(input("Mời bạn nhập chiều rộng của hình: "))
-                tong8 = r * s
-                print("Kết quả là:", tong8,"cm2" )
-
-            elif sort == 3:
-                clear_screen()
-                print("Bạn đã chọn tính diện tích hình tam giác")
-                t = float(input("Mời bạn nhập chiều cao của hình: "))
-                u = float(input("Mời bạn nhập chiều dài cạnh đáy của hình: "))
-                tong9 = 1/2 * t * u
-                print("Kết quả là:", tong9, "cm2")
-
-            elif sort == 4:
-                clear_screen()
-                print("Bạn đã chọn tính diện tích hình thang")
-                v = float(input("Mời bạn nhập chiều dài đáy bé của hình: "))
-                x = float(input("Mời bạn nhập chiều dài đáy lớn của hình: "))
-                y = float(input("Mời bạn nhập chiều cao của hình: "))
-                tong10 = (v + x) * y / 2
-                print("Kết quả là:", tong10, "cm2")
-
-            elif sort == 5:
-                clear_screen()
-                print("Bạn đã chọn tính diện tích hình bình hành")
-                a1 = float(input("Mời bạn nhập chiều dài của hình: "))
-                b1 = float(input("Mời bạn nhập chiều cao của hình: "))
-                tong11 = a1 * b1
-                print("Kết quả là:", tong11, "cm2")
-
-            elif sort == 6:
-                clear_screen()
-                print("Bạn đã chọn tính diện tích hình thoi")
-                c1 = float(input("Mời bạn nhập chiều dài đường chéo thứ 1 của hình: "))
-                d1 = float(input("Mời bạn nhập chiều dài đường chéo thứ 2 của hình: "))
-                tong12 = 1/2 * c1 * d1
-                print("Kết quả là:", tong12, "cm2")
-
-            elif sort == 7:
-                clear_screen()
-                print("Bạn đã chọn tính diện tích hình tròn")
-                e1 = float(input("Mời bạn nhập bán kính của hình: "))
-                tong13 = pi * e1 * e1
-                print("Kết quả là:", tong13, "cm2")  
-
+            from hinhphang.tinhdientich import tinh_dien_tich
+            tinh_dien_tich()
+            
     elif choice == 3:
         clear_screen()
         print("Bạn đã chọn tính chu vi / diện tích / thể tích của các hình không gian")
@@ -818,8 +672,7 @@ while True:
         elif range == 4:
             clear_screen()
             print("Bạn đã chọn tính thương đa thức")
-            tinh_thuong_da_thuc
-        
+            tinh_thuong_da_thuc()
         
         
     elif choice == 8:
