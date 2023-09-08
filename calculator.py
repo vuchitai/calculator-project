@@ -4,16 +4,6 @@ def calculator():
 import math
 def clear_screen(): 
         os.system("cls" if os.name == "nt" else "clear")
-
-def find_gcd(a, b):
-    while b != 0:
-        a, b = b, a % b
-    return a
-
-def find_lcm(a, b):
-    gcd = find_gcd(a, b)
-    lcm = (a * b) // gcd
-    return lcm
     
 
 from fractions import Fraction
@@ -126,18 +116,21 @@ while True:
         if cull == 1:
             clear_screen()
             print("Bạn đã chọn tìm ƯCLN")
+            from timso import find_gcd
             g5 = float(input("Mời bạn nhập số thứ nhất: "))
             h5 = float(input("Mời bạn nhập số thứ hai: "))
-            gcd = find_gcd(g5, h5)
-            print("Ước chung lớn nhất của", g5, "và", h5, "là:", gcd)
+            i6 = float(input("Mời bạn nhập số thứ ba: "))
+            gcd = find_gcd(g5, h5, i6)
+            print("Ước chung lớn nhất của", g5, "và", h5, "và", i6, "là:", gcd)
 
         elif cull == 2:
             clear_screen()
             print("Bạn đã chọn tìm BCNN")
             i5 = float(input("Mời bạn nhập số thứ nhất: "))
             k5 = float(input("Mời bạn nhập số thứ hai: "))
-            lcm = find_lcm(i5, k5)
-            print("Bội số chung nhỏ nhất của", i5, "và", k5, "là:", lcm)
+            l6 = float(input("Mời bạn nhập số thứ ba: "))
+            lcm = find_lcm(i5, k5, l6)
+            print("Bội số chung nhỏ nhất của", i5, "và", k5, "và", l6, "là:", lcm)
 
     elif choice == 5:
         clear_screen()
