@@ -1,6 +1,9 @@
 import os
 def clear_screen():
         os.system("cls" if os.name == "nt" else "clear")
+        
+import math
+pi = math.pi
 
 def tinh_dien_tich():
     print("Bạn đã chọn tính diện tích")
