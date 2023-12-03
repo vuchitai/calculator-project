@@ -1,7 +1,7 @@
 import os
 from time import *
 def calculator():
-    '''j cx dc'''
+    ''''''
 import math
 def clear_screen(): 
         os.system("cls" if os.name == "nt" else "clear")
@@ -98,7 +98,7 @@ while True:
             print("Bạn đã chọn tìm ƯCLN BCNN")
             from timso import tim_uoc_chung_va_boi_chung_cua_nhieu_so
             tim_uoc_chung_va_boi_chung_cua_nhieu_so()
-
+            
         
         elif choice == 5:
             clear_screen()
@@ -113,6 +113,6 @@ while True:
     except:
         print("Value error!")
         print("Chương trình sẽ khởi động lại sau 5s")
-        sleep(1)
+        sleep(2)
         clear_screen()
         countdown(5);
