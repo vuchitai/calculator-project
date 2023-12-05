@@ -18,5 +18,3 @@ def tim_uoc_chung_va_boi_chung_cua_nhieu_so():
 
   print(f"Ước chung lớn nhất (GCD) của danh sách là: {gcd_result}")
   print(f"Bội chung nhỏ nhất (LCM) của danh sách là: {lcm_result}")
-
-

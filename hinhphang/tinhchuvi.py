@@ -1,6 +1,9 @@
 import os
+import math
+pi = math.pi
 def clear_screen(): 
         os.system("cls" if os.name == "nt" else "clear")
+
 def tinh_chu_vi():
     print("Bạn đã chọn tính chu vi")
     print("Bạn muốn tính chu vi hình nào?")

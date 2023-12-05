@@ -24,7 +24,8 @@ while True:
         print("2. chu vi / diện tích của các loại hình phẳng")
         print("3. chu vi / diện tích / thể tích của các loại hình không gian")
         print("4. tìm ƯCLN / BCNN")
-        print("5. thoát")
+        print("5. chuyển đối độ dài")
+        print("6. thoát")
         choice = int(input("Nhập số để lựa chọn: "))
         
         if choice == 1:
@@ -99,8 +100,25 @@ while True:
             from timso import tim_uoc_chung_va_boi_chung_cua_nhieu_so
             tim_uoc_chung_va_boi_chung_cua_nhieu_so()
             
-        
+            
         elif choice == 5:
+            clear_screen()
+            print("bạn muốn chuyển đơn vị nào?")
+            print("1. đơn vị chu vi (m)")
+            print("2. đơn vị diện tích (m2)")
+            appoint = int(input("nhập số để lựa chọn: "))
+            
+            if appoint == 1:
+                clear_screen()
+                from doidodai.chuvi import do_dai_chu_vi
+                do_dai_chu_vi()
+
+            elif appoint == 2:
+                clear_screen()
+                from doidodai.dientich import do_dai_dien_tich
+                do_dai_dien_tich()
+            
+        elif choice == 6:
             clear_screen()
             print("cảm ơn bạn đã sử dụng.")
             break
