@@ -25,8 +25,10 @@ def do_dai_dien_tich():
     print("7. km2")
     chuyensang = int(input("nhập số: "))
 
+    if donvi == 1 and chuyensang == 1:
+        print("vì 2 đơn vị này giống nhau nên chúng sẽ bằng nhau")
 
-    if donvi == 1 and chuyensang == 2:
+    elif donvi == 1 and chuyensang == 2:
         cls()
         a = float(input("nhập đơn vị đo đã có: "))
         a1 = a/100
@@ -68,6 +70,9 @@ def do_dai_dien_tich():
         b2 = float(input("nhập đơn vị đo đã có: "))
         b3 = b2*100
         print("kết quả là: ", b3, "mm")
+        
+    elif donvi == 2 and chuyensang == 2:
+        print("vì 2 đơn vị này giống nhau nên chúng sẽ bằng nhau")
         
     elif donvi == 2 and chuyensang == 3:
         cls()
@@ -112,6 +117,9 @@ def do_dai_dien_tich():
         c9 = c8*100
         print("kết quả là:", c9, "cm")
         
+    elif donvi == 3 and chuyensang == 3:
+        print("vì 2 đơn vị này giống nhau nên chúng sẽ bằng nhau")
+        
     elif donvi == 3 and chuyensang == 4:
         cls()
         c10 = float(input("nhập đơn vị đo đã có: "))
@@ -154,6 +162,9 @@ def do_dai_dien_tich():
         e2 = float(input("nhập đơn vị đo đã có: "))
         e3 = e2*100
         print("kết quả là:", e3, "dm")
+        
+    elif donvi == 4 and chuyensang == 4:
+        print("vì 2 đơn vị này giống nhau nên chúng sẽ bằng nhau")
         
     elif donvi == 4 and chuyensang == 5:
         cls()
@@ -198,6 +209,9 @@ def do_dai_dien_tich():
         f7 = f6*100
         print("kết quả là:", f7, "m")
         
+    elif donvi == 5 and chuyensang == 5:
+        print("vì 2 đơn vị này giống nhau nên chúng sẽ bằng nhau")
+        
     elif donvi == 5 and chuyensang == 6:
         cls()
         f8 = float(input("nhập đơn vị đo đã có: "))
@@ -241,6 +255,9 @@ def do_dai_dien_tich():
         h1 = g10*100
         print("kết quả là:", h1, "dam")
         
+    elif donvi == 6 and chuyensang == 6:
+        print("vì 2 đơn vị này giống nhau nên chúng sẽ bằng nhau")
+        
     elif donvi == 6 and chuyensang == 7:
         cls()
         h2 = float(input("nhập đơn vị đo đã có: "))
@@ -283,4 +300,6 @@ def do_dai_dien_tich():
         i4 = float(input("nhập đơn vị đo đã có: "))
         i5 = i4*100
         print("kết quả là:", i5, "hm")
-        
+    
+    elif donvi == 7 and chuyensang == 7:
+        print("vì 2 đơn vị này giống nhau nên chúng sẽ bằng nhau")

@@ -4,7 +4,7 @@ def calculator():
     ''''''
 import math
 def clear_screen(): 
-        os.system("cls" if os.name == "nt" else "clear")
+    os.system("cls" if os.name == "nt" else "clear")
     
 pi = math.pi
 
@@ -25,7 +25,8 @@ while True:
         print("3. chu vi / diện tích / thể tích của các loại hình không gian")
         print("4. tìm ƯCLN / BCNN")
         print("5. chuyển đối độ dài")
-        print("6. thoát")
+        print("6. chuyển đổi khối lượng")
+        print("7. thoát")
         choice = int(input("Nhập số để lựa chọn: "))
         
         if choice == 1:
@@ -117,8 +118,13 @@ while True:
                 clear_screen()
                 from doidodai.dientich import do_dai_dien_tich
                 do_dai_dien_tich()
-            
+        
         elif choice == 6:
+            clear_screen()
+            from khoiluong import khoi_luong
+            khoi_luong()
+            
+        elif choice == 7:
             clear_screen()
             print("cảm ơn bạn đã sử dụng.")
             break

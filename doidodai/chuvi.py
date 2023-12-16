@@ -24,8 +24,10 @@ def do_dai_chu_vi():
     print("7. km")
     chuyensang = int(input("nhập số: "))
 
+    if donvi == 1 and chuyensang == 1:
+        print("vì 2 đơn vị này giống nhau nên chúng sẽ bằng nhau")
 
-    if donvi == 1 and chuyensang == 2:
+    elif donvi == 1 and chuyensang == 2:
         cls()
         a = float(input("nhập đơn vị đo đã có: "))
         a1 = a/10
@@ -66,6 +68,9 @@ def do_dai_chu_vi():
         b2 = float(input("nhập đơn vị đo đã có: "))
         b3 = b2*10
         print("kết quả là: ", b3, "mm")
+        
+    elif donvi == 2 and chuyensang == 2:
+        print("vì 2 đơn vị này giống nhau nên chúng sẽ bằng nhau")
         
     elif donvi == 2 and chuyensang == 3:
         cls()
@@ -109,6 +114,9 @@ def do_dai_chu_vi():
         c9 = c8*10
         print("kết quả là:", c9, "cm")
         
+    elif donvi == 3 and chuyensang == 3:
+        print("vì 2 đơn vị này giống nhau nên chúng sẽ bằng nhau")
+        
     elif donvi == 3 and chuyensang == 4:
         cls()
         c10 = float(input("nhập đơn vị đo đã có: "))
@@ -151,6 +159,9 @@ def do_dai_chu_vi():
         e3 = e2*10
         print("kết quả là:", e3, "dm")
         
+    elif donvi == 4 and chuyensang == 4:
+        print("vì 2 đơn vị này giống nhau nên chúng sẽ bằng nhau")
+        
     elif donvi == 4 and chuyensang == 5:
         cls()
         e4 = float(input("nhập đơn vị đo đã có: "))
@@ -192,6 +203,9 @@ def do_dai_chu_vi():
         f6 = float(input("nhập đơn vị đo đã có: "))
         f7 = f6*10
         print("kết quả là:", f7, "m")
+        
+    elif donvi == 6 and chuyensang == 6:
+        print("vì 2 đơn vị này giống nhau nên chúng sẽ bằng nhau")
         
     elif donvi == 5 and chuyensang == 6:
         cls()
@@ -277,3 +291,5 @@ def do_dai_chu_vi():
         i5 = i4*10
         print("kết quả là:", i5, "hm")
         
+    elif donvi == 7 and chuyensang == 7:
+        print("vì 2 đơn vị này giống nhau nên chúng sẽ bằng nhau")
