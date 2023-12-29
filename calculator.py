@@ -26,6 +26,7 @@ while True:
         print("4. tìm ƯCLN / BCNN")
         print("5. chuyển đối độ dài")
         print("6. chuyển đổi khối lượng")
+        print("7. xác định tam giác vuông")
         print("7. thoát")
         choice = int(input("Nhập số để lựa chọn: "))
         
@@ -67,8 +68,8 @@ while True:
 
             if option == 1:
                 clear_screen()
-                from hinhkogian.chuvi.tinhchuvikogian import tinh_chu_vi
-                tinh_chu_vi()
+                from space_shape.perimeter.space_perimeter import calculate_the_perimeter_of_space
+                calculate_the_perimeter_of_space()
 
             elif option == 2:
                 clear_screen()
@@ -80,19 +81,19 @@ while True:
 
                 if decision == 1:
                     clear_screen()
-                    from hinhkogian.dientich.Sxq.Sxq import tinh_Sxq
+                    from space_shape.acreage.Sxq.Sxq import tinh_Sxq
                     tinh_Sxq()
 
                 elif decision == 2:
                     clear_screen()
-                    from hinhkogian.dientich.Stp.Stp import tinh_Stp
+                    from space_shape.acreage.Stp.Stp import tinh_Stp
                     tinh_Stp()
                     
                             
             elif option == 3:
                 clear_screen()
-                from hinhkogian.thetich.tinhthetich import tinh_the_tich
-                tinh_the_tich()
+                from space_shape.volume.volume_calculation import volume_calculation
+                volume_calculation()
                 
 
         elif choice == 4:
@@ -121,8 +122,8 @@ while True:
         
         elif choice == 6:
             clear_screen()
-            from khoiluong import khoi_luong
-            khoi_luong()
+            from measure_volume import measure_volume
+            measure_volume()
             
         elif choice == 7:
             clear_screen()
